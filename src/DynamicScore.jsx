@@ -7,15 +7,17 @@ export default function DynamicScore() {
     const [api_data, setApi_data] = useState([]);
     let [avg, setAvg] = useState(0);
     let [avg2, setAvg2] = useState(0);
+   
 
     useEffect(() => {
 
-        axios.get('https://assessments.reliscore.com/api/cric-scores/').
+        axios.get('https://assessments.reliscore.com/api/cric-scores/')
 
-            then((res) => setApi_data([...api_data, res.data])).
-            catch((error) => console.log(error))
+            .then((res) => setApi_data([...api_data, res.data]))
+            .catch((error) => console.log(error))
 
-    }, [])
+    },[])
+
 
     console.log(api_data);
 
