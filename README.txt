@@ -2,9 +2,9 @@ Average Run Comparison Web App
 
 •	Information:  It Is a Web App to show and comparison between two different country’s average run rates by horizontal bar graph.
 
-•   Buttons and Fields: 
-        oTwo radio buttons
-        oTwo input fields
+• Buttons and Fields: 
+       oTwo radio buttons
+       oTwo input fields
 
 •	 Function of Radio button: Using radio button user can change source of     from Static data to Servers dynamic data.
 
