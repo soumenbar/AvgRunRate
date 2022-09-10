@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import { useState } from "react";
+import DynamicScore from "./DynamicScore";
+import StaticScore from "./StaticScore";
 import './App.css';
 
+
 function App() {
+  let [source, setSoure] = useState("test")
+  console.log(source);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="source">
+        <form onChange={(e) => setSoure(e.target.value)}>
+          Source of data:
+          <input id="src-test" type="radio"
+            name="data-source" value="test" defaultChecked />
+          <label htmlFor="src-local">Test Data</label>
+          <input id="src-server" type="radio"
+            name="data-source" value="server" />
+          <label htmlFor="src-server">Server Data</label>
+        </form>
+      </div>
+      <hr/>
+
+
+
+
+      {source === 'test' ? <StaticScore /> :
+        <DynamicScore />}
+
     </div>
   );
 }

@@ -1,0 +1,88 @@
+* {
+    transition: all 0.1s linear;
+
+
+
+}
+
+div {
+    display: inline-block;
+}
+
+.horiz-bar {
+    display: inline-block;
+    background-color: rgb(75, 1, 248);
+    border-style: solid;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+.row {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+hr {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 900px) {
+
+    .country,
+    .average {
+        width: 250px;
+        margin-right: 20px;
+    }
+
+    .row {
+        font-size: 1.2rem;
+    }
+
+    .country-input {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 899px) {
+
+    .country,
+    .average {
+        width: 200px;
+        margin-left: 10px;
+    }
+
+    .row {
+        font-size: 90%;
+    }
+
+    .country-input {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+
+    .country,
+    .average {
+        width: 300px;
+        margin-bottom: 5px;
+    }
+
+    .row {
+        font-size: 100%;
+        display: inline;
+    }
+
+    .horiz-bar {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .country-input {
+        width: 150px;
+    }
+
+}
